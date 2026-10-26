@@ -38,4 +38,13 @@ class UserDecorator extends DecoratorFactory
                '</email>' .
                '</item>';
     }
+
+    public function listItems() : string
+    {
+        return '- ' .
+               htmlspecialchars($this->title()) .
+               ' (' .
+               htmlspecialchars($this->user->email) .
+               ')';
+    }
 }

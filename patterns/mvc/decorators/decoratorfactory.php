@@ -12,4 +12,5 @@ abstract class DecoratorFactory
     abstract public function title() : string;
     abstract public function body() : string;
     abstract public function items() : string;
+    abstract public function listItems() : string;
 }

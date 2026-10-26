@@ -42,4 +42,13 @@ class UsersDecorator extends DecoratorFactory
                 return $decorated_item->items();
             }, '');
     }
+
+    public function listItems() : string
+    {
+        return $this->collection_render(
+            function($item){
+                $decorated_item = new UserDecorator($item);
+                return $decorated_item->listItems();
+            }, '');
+    }
 }
